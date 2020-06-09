@@ -13,6 +13,15 @@
 		8EA082CF248F105A008C3C25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082CD248F105A008C3C25 /* Main.storyboard */; };
 		8EA082D1248F105C008C3C25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082D0248F105C008C3C25 /* Assets.xcassets */; };
 		8EA082D4248F105C008C3C25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082D2248F105C008C3C25 /* LaunchScreen.storyboard */; };
+		8EA082E5248F10A6008C3C25 /* knife.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082DC248F10A5008C3C25 /* knife.mp3 */; };
+		8EA082E6248F10A6008C3C25 /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082DD248F10A5008C3C25 /* explosion.mp3 */; };
+		8EA082E7248F10A6008C3C25 /* shoot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082DE248F10A5008C3C25 /* shoot.mp3 */; };
+		8EA082E8248F10A6008C3C25 /* wah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082DF248F10A6008C3C25 /* wah.mp3 */; };
+		8EA082E9248F10A6008C3C25 /* hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082E0248F10A6008C3C25 /* hit.mp3 */; };
+		8EA082EA248F10A6008C3C25 /* boing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082E1248F10A6008C3C25 /* boing.mp3 */; };
+		8EA082EB248F10A6008C3C25 /* swish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082E2248F10A6008C3C25 /* swish.mp3 */; };
+		8EA082EC248F10A6008C3C25 /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082E3248F10A6008C3C25 /* bach.mp3 */; };
+		8EA082ED248F10A6008C3C25 /* warble.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8EA082E4248F10A6008C3C25 /* warble.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		8EA082D0248F105C008C3C25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EA082D3248F105C008C3C25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EA082D5248F105C008C3C25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EA082DC248F10A5008C3C25 /* knife.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = knife.mp3; path = "../../../Audio demo resources-20200608/knife.mp3"; sourceTree = "<group>"; };
+		8EA082DD248F10A5008C3C25 /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = explosion.mp3; path = "../../../Audio demo resources-20200608/explosion.mp3"; sourceTree = "<group>"; };
+		8EA082DE248F10A5008C3C25 /* shoot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = shoot.mp3; path = "../../../Audio demo resources-20200608/shoot.mp3"; sourceTree = "<group>"; };
+		8EA082DF248F10A6008C3C25 /* wah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = wah.mp3; path = "../../../Audio demo resources-20200608/wah.mp3"; sourceTree = "<group>"; };
+		8EA082E0248F10A6008C3C25 /* hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = hit.mp3; path = "../../../Audio demo resources-20200608/hit.mp3"; sourceTree = "<group>"; };
+		8EA082E1248F10A6008C3C25 /* boing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = boing.mp3; path = "../../../Audio demo resources-20200608/boing.mp3"; sourceTree = "<group>"; };
+		8EA082E2248F10A6008C3C25 /* swish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = swish.mp3; path = "../../../Audio demo resources-20200608/swish.mp3"; sourceTree = "<group>"; };
+		8EA082E3248F10A6008C3C25 /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bach.mp3; path = "../../../Audio demo resources-20200608/bach.mp3"; sourceTree = "<group>"; };
+		8EA082E4248F10A6008C3C25 /* warble.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = warble.mp3; path = "../../../Audio demo resources-20200608/warble.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 		8EA082C6248F105A008C3C25 /* audioPlayerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8EA082DB248F1084008C3C25 /* res */,
 				8EA082C7248F105A008C3C25 /* AppDelegate.swift */,
 				8EA082C9248F105A008C3C25 /* SceneDelegate.swift */,
 				8EA082CB248F105A008C3C25 /* ViewController.swift */,
@@ -65,6 +84,22 @@
 				8EA082D5248F105C008C3C25 /* Info.plist */,
 			);
 			path = audioPlayerDemo;
+			sourceTree = "<group>";
+		};
+		8EA082DB248F1084008C3C25 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				8EA082E3248F10A6008C3C25 /* bach.mp3 */,
+				8EA082E1248F10A6008C3C25 /* boing.mp3 */,
+				8EA082DD248F10A5008C3C25 /* explosion.mp3 */,
+				8EA082E0248F10A6008C3C25 /* hit.mp3 */,
+				8EA082DC248F10A5008C3C25 /* knife.mp3 */,
+				8EA082DE248F10A5008C3C25 /* shoot.mp3 */,
+				8EA082E2248F10A6008C3C25 /* swish.mp3 */,
+				8EA082DF248F10A6008C3C25 /* wah.mp3 */,
+				8EA082E4248F10A6008C3C25 /* warble.mp3 */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +160,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA082E5248F10A6008C3C25 /* knife.mp3 in Resources */,
+				8EA082EB248F10A6008C3C25 /* swish.mp3 in Resources */,
 				8EA082D4248F105C008C3C25 /* LaunchScreen.storyboard in Resources */,
+				8EA082EC248F10A6008C3C25 /* bach.mp3 in Resources */,
+				8EA082EA248F10A6008C3C25 /* boing.mp3 in Resources */,
+				8EA082ED248F10A6008C3C25 /* warble.mp3 in Resources */,
+				8EA082E9248F10A6008C3C25 /* hit.mp3 in Resources */,
 				8EA082D1248F105C008C3C25 /* Assets.xcassets in Resources */,
 				8EA082CF248F105A008C3C25 /* Main.storyboard in Resources */,
+				8EA082E7248F10A6008C3C25 /* shoot.mp3 in Resources */,
+				8EA082E6248F10A6008C3C25 /* explosion.mp3 in Resources */,
+				8EA082E8248F10A6008C3C25 /* wah.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
