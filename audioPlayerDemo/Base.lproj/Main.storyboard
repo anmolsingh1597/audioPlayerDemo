@@ -40,6 +40,9 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DUs-ge-L6d">
                                                 <rect key="frame" x="-2" y="0.0" width="131.5" height="31"/>
+                                                <connections>
+                                                    <action selector="valueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="bRu-Ug-D84"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vmV-d9-xO3">
                                                 <rect key="frame" x="-2" y="113" width="131.5" height="31"/>
@@ -73,8 +76,7 @@
                     <connections>
                         <outlet property="playBtn" destination="KgP-EM-xee" id="EzE-H3-VcY"/>
                         <outlet property="scrollBar" destination="DUs-ge-L6d" id="HGR-UC-2ql"/>
-                        <outlet property="volumeSlide" destination="DUs-ge-L6d" id="CJp-73-NW4"/>
-                        <outlet property="volumeSlider" destination="vmV-d9-xO3" id="la5-FU-aN6"/>
+                        <outlet property="volumeSlider" destination="vmV-d9-xO3" id="8oY-RV-IL0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

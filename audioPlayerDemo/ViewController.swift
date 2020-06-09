@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         do{
        try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
+            scrollBar.maximumValue = Float(player.duration)
     }catch{
     print(error)
     }
@@ -51,6 +52,18 @@ class ViewController: UIViewController {
     
     @objc func updateScrubber(){
         scrollBar.value = Float(player.currentTime)
+        if scrollBar.value == scrollBar.minimumValue{
+            isPlaying = false
+            playBtn.image = UIImage(systemName: "play.fill")
+        }
+    }
+    
+    
+    @IBAction func valueChanged(_ sender: UISlider) {
+        player.currentTime = TimeInterval(scrollBar.value)
+        if isPlaying{
+            player.play()
+        }
     }
 }
 
