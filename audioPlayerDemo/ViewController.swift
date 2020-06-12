@@ -22,18 +22,23 @@ class ViewController: UIViewController {
     var player = AVAudioPlayer()
     
     // we need to acess the audio file path
-    let path = Bundle.main.path(forResource: "bach", ofType: "mp3")
+    var path = Bundle.main.path(forResource: "bach", ofType: "mp3")
     
     var timer = Timer()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // add tap gesture to volume slider
+        let volumeGestureRecognizer = UIGestureRecognizer(target: self, action: #selector(sliderTapped))
+        volumeSlider.addGestureRecognizer(volumeGestureRecognizer)
+        
         do{
        try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
             scrollBar.maximumValue = Float(player.duration)
-    }catch{
-    print(error)
-    }
+        }catch{
+            print(error)
+        }
     }
 
     @IBAction func playAudio(_ sender: UIBarButtonItem) {
@@ -50,6 +55,9 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func volumeValueChanged(_ sender: UISlider) {
+        player.volume = volumeSlider.value
+    }
     @objc func updateScrubber(){
         scrollBar.value = Float(player.currentTime)
         if scrollBar.value == scrollBar.minimumValue{
@@ -65,5 +73,47 @@ class ViewController: UIViewController {
             player.play()
         }
     }
+
+    @IBAction func stopAudio(_ sender: UIBarButtonItem) {
+        player.stop()
+        timer.invalidate()
+        player.currentTime = 0
+        scrollBar.value = 0
+        playBtn.image = UIImage(systemName: "play.fill")
+        isPlaying = false
+    }
+    
+    @objc func sliderTapped(_ gesture: UIGestureRecognizer){
+        
+           let s: UISlider? = (gesture.view as? UISlider)
+           if (s?.isHighlighted)! {
+               return
+           }
+
+           // tap on thumb, let slider deal with it
+           let pt: CGPoint = gesture.location(in: s)
+           let percentage = pt.x / (s?.bounds.size.width)!
+           let delta = Float(percentage) * Float((s?.maximumValue)! - (s?.minimumValue)!)
+           let value = (s?.minimumValue)! + delta
+           s?.setValue(Float(value), animated: true)
+            player.volume = s!.value
+
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEvent.EventSubtype.motionShake{
+            let audioArray = ["boing", "knife", "swish", "wwarble", "wah", "shoot", "hit", "explosion", "bach"]
+            
+            let randomNumber = Int.random(in: 0..<audioArray.count)
+            path = Bundle.main.path(forResource: audioArray[randomNumber], ofType: "mp3")
+              do{
+               try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: path!))
+                    scrollBar.maximumValue = Float(player.duration)
+            }catch{
+            print(error)
+            }
+        }
+    }
+    
 }
 

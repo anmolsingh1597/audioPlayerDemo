@@ -46,6 +46,9 @@
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vmV-d9-xO3">
                                                 <rect key="frame" x="-2" y="113" width="131.5" height="31"/>
+                                                <connections>
+                                                    <action selector="volumeValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bjw-jS-uhK"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                     </stackView>
@@ -61,7 +64,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="sDA-Zu-7Fu"/>
-                                    <barButtonItem title="Stop" image="stop.fill" catalog="system" id="Nti-H8-wZb"/>
+                                    <barButtonItem title="Stop" image="stop.fill" catalog="system" id="Nti-H8-wZb">
+                                        <connections>
+                                            <action selector="stopAudio:" destination="BYZ-38-t0r" id="xEv-QW-JWU"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
